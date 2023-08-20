@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DatabaseController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\LaporanController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +24,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/data_toko', [DatabaseController::class, 'data_toko'])->name('data toko');
+Route::get('/data_pegawai', [DatabaseController::class, 'data_pegawai'])->name('data pegawai');
+Route::get('/data_supplier', [DatabaseController::class, 'data_supplier'])->name('data supplier');
+Route::get('/data_barang', [DatabaseController::class, 'data_barang'])->name('data barang');
+Route::get('/data_member', [DatabaseController::class, 'data_member'])->name('data member');
+
+Route::get('/trx_umum', [TransaksiController::class, 'trx_umum'])->name('trx umum');
+Route::get('/trx_grosir', [TransaksiController::class, 'trx_grosir'])->name('trx grosir');
+Route::get('/trx_member', [TransaksiController::class, 'trx_member'])->name('trx member');
+Route::get('/trx_logs', [TransaksiController::class, 'trx_logs'])->name('trx logs');
+
+Route::get('/laporan_harian', [LaporanController::class, 'laporan_harian'])->name('laporan harian');
+Route::get('/laporan_bulanan', [LaporanController::class, 'laporan_bulanan'])->name('laporan bulanan');
+Route::get('/laporan_tahunan', [LaporanController::class, 'laporan_tahunan'])->name('laporan tahunan');
