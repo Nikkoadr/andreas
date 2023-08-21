@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\DataSupplier;
+use Illuminate\Support\Facades\DB;
 
 class DataSupplierSeeder extends Seeder
 {
@@ -12,10 +12,21 @@ class DataSupplierSeeder extends Seeder
      */
     public function run()
     {
-        DataSupplier::create([
-            'nama' => 'Sinar Jaya',
-            'alamat' => 'Jatibarang',
-            'nomor_hp' => '08190002000',
-        ]);
+        DB::table('data_supplier')->insert(
+            [
+                [
+                    'supplier_toko' => '1',
+                    'nama' => 'Siniar Jaya',
+                    'alamat' => 'Jatibarang',
+                    'nomor_hp' => '08190002000',
+                ],
+                [
+                    'supplier_toko' => '2',
+                    'nama' => 'Ono',
+                    'alamat' => 'Indramayu',
+                    'nomor_hp' => '08190005000',
+                ]
+            ]
+        );
     }
 }

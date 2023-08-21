@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\DataToko;
+use Illuminate\Support\Facades\DB;
 
 class DataTokoSeeder extends Seeder
 {
@@ -13,9 +13,17 @@ class DataTokoSeeder extends Seeder
      */
     public function run()
     {
-        DataToko::create([
-            'nama' => 'Toko Andreas',
-            'alamat' => 'Jangga',
-        ]);
+        DB::table('data_toko')->insert(
+            [
+                [
+                    'nama' => 'Toko Andreas',
+                    'alamat' => 'Jangga',
+                ],
+                [
+                    'nama' => 'Angel Cell',
+                    'alamat' => 'Jangga'
+                ]
+            ]
+        );
     }
 }
