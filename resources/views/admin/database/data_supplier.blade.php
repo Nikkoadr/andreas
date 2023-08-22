@@ -51,7 +51,7 @@
                 @foreach ($data_supplier as $data )
                 <tr>
                 <td><?= $no++ ?></td>
-                <td>{{ $data -> supplier_toko }}</td>
+                <td>{{ $data -> id_toko }}</td>
                 <td>{{ $data -> nama }}</td>
                 <td>{{ $data -> alamat }}</td>
                 <td>{{ $data -> nomor_hp }}</td>

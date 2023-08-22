@@ -61,8 +61,8 @@ class DatabaseController extends Controller
             return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data Supplier"]);
         } else {
             $idTokoAktif = Auth::user()->id_toko;
-            $data_pegawai = DataSupplier::where('id_toko', $idTokoAktif)->get();
-            return view('admin.database.data_pegawai', compact(['data_pegawai']), ["title" => "Data Pegawai"]);
+            $data_supplier = DataSupplier::where('id_toko', $idTokoAktif)->get();
+            return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data supplier"]);
         }
     }
 

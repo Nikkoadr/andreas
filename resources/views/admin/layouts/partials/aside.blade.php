@@ -68,15 +68,15 @@
             </a>
             </li>
             <li class="nav-item">
-            <a href="data_barang" class="nav-link {{ Route::is('data barang') ? 'active' : '' }}">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Data Barang</p>
-            </a>
-            </li>
-            <li class="nav-item">
             <a href="data_member" class="nav-link {{ Route::is('data member') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Data Member</p>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a href="data_barang" class="nav-link {{ Route::is('data barang') ? 'active' : '' }}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Barang</p>
             </a>
             </li>
         </ul>
