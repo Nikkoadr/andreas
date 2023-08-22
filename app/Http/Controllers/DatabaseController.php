@@ -56,8 +56,14 @@ class DatabaseController extends Controller
 
     public function data_supplier()
     {
-        $data_supplier = DataSupplier::latest()->paginate(100);
-        return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data Supplier"]);
+        if (Gate::check('admin')) {
+            $data_supplier = DataSupplier::all();
+            return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data Supplier"]);
+        } else {
+            $idTokoAktif = Auth::user()->id_toko;
+            $data_pegawai = DataSupplier::where('id_toko', $idTokoAktif)->get();
+            return view('admin.database.data_pegawai', compact(['data_pegawai']), ["title" => "Data Pegawai"]);
+        }
     }
 
     public function data_barang()
