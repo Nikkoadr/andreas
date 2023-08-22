@@ -16,6 +16,7 @@ class DataBarangSeeder extends Seeder
             'nama' => 'Tepung Ketan',
             'merek' => 'Rose Brand',
             'qty' => '100',
+            'harga_modal' => '9000',
             'harga_umum' => '12000',
             'harga_grosir' => '11000',
             'harga_member' => '10000',

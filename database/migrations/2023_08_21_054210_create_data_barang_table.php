@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('merek');
             $table->integer('qty');
+            $table->integer('harga_modal');
             $table->integer('harga_umum');
             $table->integer('harga_grosir');
             $table->integer('harga_member');

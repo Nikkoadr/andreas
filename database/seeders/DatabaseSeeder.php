@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             DataSupplierSeeder::class,
             DataBarangSeeder::class,
             DataMemberSeeder::class,
+            RoleSeeder::class,
         ]);
     }
 }
