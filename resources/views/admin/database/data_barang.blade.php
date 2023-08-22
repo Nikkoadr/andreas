@@ -42,6 +42,7 @@
                 <th>Nama</th>
                 <th>merek</th>
                 <th>qty</th>
+                <th>Harga Modal</th>
                 <th>Harga Umum</th>
                 <th>Harga Grosir</th>
                 <th>Harga Member</th>
@@ -56,6 +57,7 @@
                 <td>{{ $data -> nama }}</td>
                 <td>{{ $data -> merek }}</td>
                 <td>{{ $data -> qty }}</td>
+                <td>{{ $data -> harga_modal }}</td>
                 <td>{{ $data -> harga_umum }}</td>
                 <td>{{ $data -> harga_grosir }}</td>
                 <td>{{ $data -> harga_member }}</td>

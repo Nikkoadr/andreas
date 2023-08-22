@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class LaporanController extends Controller
 {
@@ -23,16 +24,28 @@ class LaporanController extends Controller
      */
     public function laporan_harian()
     {
-        return view('admin.laporan.laporan_harian');
+        if (Gate::denies('karyawan')) {
+            return view('admin.laporan.laporan_harian');
+        } else {
+            return back();
+        }
     }
 
     public function laporan_bulanan()
     {
-        return view('admin.laporan.laporan_bulanan');
+        if (Gate::denies('karyawan')) {
+            return view('admin.laporan.laporan_bulanan');
+        } else {
+            return back();
+        }
     }
 
     public function laporan_tahunan()
     {
-        return view('admin.laporan.laporan_tahunan');
+        if (Gate::denies('karyawan')) {
+            return view('admin.laporan.laporan_tahunan');
+        } else {
+            return back();
+        }
     }
 }

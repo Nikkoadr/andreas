@@ -17,30 +17,35 @@ class UserSeeder extends Seeder
         DB::table('users')->insert(
             [
                 [
+                    'id_toko' => '0',
                     'role' => '1',
                     'nama' => 'Administrator',
                     'email' => 'nikkoadrian02@gmail.com',
                     'password' => Hash::make('1234567800*'),
                 ],
                 [
+                    'id_toko' => '1',
                     'role' => '2',
                     'nama' => 'Andreas Limanto',
                     'email' => 'admin@tokoandreas.com',
                     'password' => Hash::make('1234567800'),
                 ],
                 [
+                    'id_toko' => '2',
                     'role' => '2',
                     'nama' => 'Agus Priyanto',
                     'email' => 'admin@angelcell.com',
                     'password' => Hash::make('1234567800'),
                 ],
                 [
+                    'id_toko' => '1',
                     'role' => '3',
                     'nama' => 'Agnes',
                     'email' => 'karyawan1@tokoandreas.com',
                     'password' => Hash::make('1234567800'),
                 ],
                 [
+                    'id_toko' => '2',
                     'role' => '3',
                     'nama' => 'Ratna',
                     'email' => 'karyawan1@angelcell.com',

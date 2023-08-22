@@ -45,18 +45,22 @@
             </p>
         </a>
         <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <a href="data_toko" class="nav-link {{ Route::is('data toko') ? 'active' : '' }}">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Data Toko</p>
-            </a>
-            </li>
-            <li class="nav-item">
+            @can('admin')
+                <li class="nav-item">
+                    <a href="data_toko" class="nav-link {{ Route::is('data toko') ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Data Toko</p>
+                    </a>
+                </li>
+            @endcan
+            @cannot('karyawan')
+                <li class="nav-item">
             <a href="data_pegawai" class="nav-link {{ Route::is('data pegawai') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Data Pegawai</p>
             </a>
             </li>
+            @endcannot
             <li class="nav-item">
             <a href="data_supplier" class="nav-link {{ Route::is('data supplier') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
@@ -118,6 +122,7 @@
             </li>
         </ul>
     </li>
+    @cannot('karyawan')
         <li class="nav-item menu-open">
         <a href="#" class="nav-link 
         {{ Route::is('laporan harian') ? 'active' : '' }}
@@ -151,6 +156,8 @@
             </li>
         </ul>
     </li>
+    @endcannot
+        
     </ul>
     
     </nav>

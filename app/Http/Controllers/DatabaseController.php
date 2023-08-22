@@ -7,7 +7,9 @@ use App\Models\DataSupplier;
 use App\Models\DataToko;
 use App\Models\User;
 use App\Models\DataMember;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DatabaseController extends Controller
 {
@@ -28,14 +30,28 @@ class DatabaseController extends Controller
      */
     public function data_toko()
     {
-        $data_toko = DataToko::latest()->paginate(100);
-        return view('admin.database.data_toko', compact(['data_toko']), ["title" => "Data Toko"]);
+        if (Gate::allows('admin')) {
+            $data_toko = DataToko::latest()->paginate(100);
+            return view('admin.database.data_toko', compact(['data_toko']), ["title" => "Data Toko"]);
+        } else {
+            return back();
+        }
     }
 
     public function data_pegawai()
     {
-        $data_pegawai = User::latest()->paginate(100);
-        return view('admin.database.data_pegawai', compact(['data_pegawai']), ["title" => "Data Pegawai"]);
+        if (Gate::denies('karyawan')) {
+            if (Gate::check('admin')) {
+                $data_pegawai = User::all();
+                return view('admin.database.data_pegawai', compact(['data_pegawai']), ["title" => "Data Pegawai"]);
+            } else {
+                $idTokoAktif = Auth::user()->id_toko;
+                $data_pegawai = User::where('id_toko', $idTokoAktif)->get();
+                return view('admin.database.data_pegawai', compact(['data_pegawai']), ["title" => "Data Pegawai"]);
+            }
+        } else {
+            return back();
+        }
     }
 
     public function data_supplier()

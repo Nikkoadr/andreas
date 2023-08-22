@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 @endsection
+@can('admin')
 @section('content')
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
@@ -138,4 +139,5 @@ var Toast = Swal.mixin({
 });
 @endif
 </script>
-@endsection
+@endsection   
+@endcan
