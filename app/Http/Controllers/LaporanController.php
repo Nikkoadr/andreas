@@ -25,7 +25,7 @@ class LaporanController extends Controller
     public function laporan_harian()
     {
         if (Gate::denies('karyawan')) {
-            return view('admin.laporan.laporan_harian');
+            return view('admin.laporan.laporan_harian', ["title" => "Laporan Harian"]);
         } else {
             return back();
         }
@@ -34,7 +34,7 @@ class LaporanController extends Controller
     public function laporan_bulanan()
     {
         if (Gate::denies('karyawan')) {
-            return view('admin.laporan.laporan_bulanan');
+            return view('admin.laporan.laporan_bulanan', ["title" => "Laporan Bulanan"]);
         } else {
             return back();
         }
@@ -43,7 +43,7 @@ class LaporanController extends Controller
     public function laporan_tahunan()
     {
         if (Gate::denies('karyawan')) {
-            return view('admin.laporan.laporan_tahunan');
+            return view('admin.laporan.laporan_tahunan', ["title" => "Laporan Tahunan"]);
         } else {
             return back();
         }

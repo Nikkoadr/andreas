@@ -80,7 +80,13 @@ class DatabaseController extends Controller
 
     public function data_barang()
     {
-        $data_barang = DataBarang::latest()->paginate(100);
-        return view('admin.database.data_barang', compact(['data_barang']), ["title" => "Data Barang"]);
+        if (Gate::check('admin')) {
+            $data_barang = DataBarang::all();
+            return view('admin.database.data_barang', compact(['data_barang']), ["title" => "Data Barang"]);
+        } else {
+            $idTokoAktif = Auth::user()->id_toko;
+            $data_barang = DataBarang::where('id_toko', $idTokoAktif)->get();
+            return view('admin.database.data_barang', compact(['data_barang']), ["title" => "Data Barang"]);
+        }
     }
 }

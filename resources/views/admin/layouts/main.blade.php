@@ -3,7 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toko Andreas | Dashboard</title>
+    <title>
+        @if(Auth::user()->id_toko)
+        @php
+            $idTokoAktif = Auth::user()->id_toko;
+            $data_toko = App\Models\DataToko::where('id', $idTokoAktif)->first();
+        @endphp
+        {{ $data_toko->nama }}
+        @else
+            POS
+        @endif | {{ $title }}
+    </title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
