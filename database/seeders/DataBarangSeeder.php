@@ -14,7 +14,6 @@ class DataBarangSeeder extends Seeder
     {
         DataBarang::create([
             'nama' => 'Tepung Ketan',
-            'merek' => 'Rose Brand',
             'qty' => '100',
             'harga_modal' => '9000',
             'harga_umum' => '12000',

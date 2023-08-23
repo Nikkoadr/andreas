@@ -40,7 +40,6 @@
                 <tr style="text-align: center">
                 <th>No</th>
                 <th>Nama</th>
-                <th>merek</th>
                 <th>qty</th>
                 <th>Harga Modal</th>
                 <th>Harga Umum</th>
@@ -55,7 +54,6 @@
                 <tr>
                 <td><?= $no++ ?></td>
                 <td>{{ $data -> nama }}</td>
-                <td>{{ $data -> merek }}</td>
                 <td>{{ $data -> qty }}</td>
                 <td>{{ $data -> harga_modal }}</td>
                 <td>{{ $data -> harga_umum }}</td>

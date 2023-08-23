@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('data_member', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_toko');
             $table->string('nama');
             $table->string('alamat');
             $table->timestamps();

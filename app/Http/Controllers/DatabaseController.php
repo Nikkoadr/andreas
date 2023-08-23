@@ -62,7 +62,19 @@ class DatabaseController extends Controller
         } else {
             $idTokoAktif = Auth::user()->id_toko;
             $data_supplier = DataSupplier::where('id_toko', $idTokoAktif)->get();
-            return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data supplier"]);
+            return view('admin.database.data_supplier', compact(['data_supplier']), ["title" => "Data Supplier"]);
+        }
+    }
+
+    public function data_member()
+    {
+        if (Gate::check('admin')) {
+            $data_member = DataMember::all();
+            return view('admin.database.data_member', compact(['data_member']), ["title" => "Data Member"]);
+        } else {
+            $idTokoAktif = Auth::user()->id_toko;
+            $data_member = DataMember::where('id_toko', $idTokoAktif)->get();
+            return view('admin.database.data_member', compact(['data_member']), ["title" => "Data Member"]);
         }
     }
 
@@ -70,10 +82,5 @@ class DatabaseController extends Controller
     {
         $data_barang = DataBarang::latest()->paginate(100);
         return view('admin.database.data_barang', compact(['data_barang']), ["title" => "Data Barang"]);
-    }
-    public function data_member()
-    {
-        $data_member = DataMember::latest()->paginate(100);
-        return view('admin.database.data_member', compact(['data_member']), ["title" => "Data member"]);
     }
 }
