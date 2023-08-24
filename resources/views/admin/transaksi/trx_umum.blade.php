@@ -4,47 +4,86 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
-<section class="content-header">
+<div class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1>Transaksi</h1>
-        </div>
+        <h1 class="m-0">Transaksi</h1>
+        </div><!-- /.col -->
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Transaksi</a></li>
-            <li class="breadcrumb-item active">Umum</li>
+            <li class="breadcrumb-item active">Transaksi umum</li>
         </ol>
-        </div>
-    </div>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
     </div><!-- /.container-fluid -->
-</section>
+</div>
+<!-- /.content-header -->
+
 <!-- Main content -->
-<section class="content">
-    <!-- Default box -->
-    <div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Transaksi Umum</h3>
-        <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-        </button>
+<div class="content">
+    <div class="container-fluid">
+    <div class="row">
+
+        <!-- /.col-md-6 -->
+        <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+            <h5 class="m-0">Nota</h5>
+            </div>
+            <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
         </div>
+
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+            <h5 class="m-0">Administrasi</h5>
+            </div>
+            <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        </div>
+        <!-- /.col-md-6 -->
+        <!-- /.col-md-6 -->
+        <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+            <h5 class="m-0">Pilih Barang</h5>
+            </div>
+            <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+            <h5 class="m-0">Keranjang</h5>
+            </div>
+            <div class="card-body">
+            <h6 class="card-title">Special title treatment</h6>
+
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        </div>
+        <!-- /.col-md-6 -->
     </div>
-    <div class="card-body">
-        Ini Transaksi Umum
-    </div>
-    <!-- /.card-body -->
-    <div class="card-footer">
-        Footer
-    </div>
-    <!-- /.card-footer-->
-    </div>
-    <!-- /.card -->
-</section>
+    <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

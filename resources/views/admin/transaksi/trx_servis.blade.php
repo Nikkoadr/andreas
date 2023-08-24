@@ -13,7 +13,7 @@
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Transaksi</a></li>
-            <li class="breadcrumb-item active">Member</li>
+            <li class="breadcrumb-item active">Servis</li>
         </ol>
         </div>
     </div>
@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Transaksi Member</h3>
+        <h3 class="card-title">Transaksi Servis</h3>
         <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
             <i class="fas fa-minus"></i>
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="card-body">
-        Ini Transaksi Member
+        Ini Transaksi Servis
     </div>
     <!-- /.card-body -->
     <div class="card-footer">

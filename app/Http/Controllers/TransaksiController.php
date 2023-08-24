@@ -31,9 +31,9 @@ class TransaksiController extends Controller
         return view('admin.transaksi.trx_grosir', ["title" => "Transaksi Grosir"]);
     }
 
-    public function trx_member()
+    public function trx_servis()
     {
-        return view('admin.transaksi.trx_member', ["title" => "Transaksi Member"]);
+        return view('admin.transaksi.trx_servis', ["title" => "Transaksi Servis"]);
     }
 
     public function trx_logs()

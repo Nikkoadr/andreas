@@ -118,9 +118,9 @@
             </a>
             </li>
             <li class="nav-item">
-            <a href="trx_member" class="nav-link {{ Route::is('trx member') ? 'active' : '' }}">
+            <a href="trx_servis" class="nav-link {{ Route::is('trx servis') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Transaksi Member</p>
+                <p>Transaksi Servis</p>
             </a>
             </li>
             <li class="nav-item">

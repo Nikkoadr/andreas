@@ -98,7 +98,7 @@
 <!-- Page specific script -->
 <script>
 $(function () {
-$("#table_data_sipplier").DataTable({
+$("#table_data_supplier").DataTable({
     "responsive": true, 
     "lengthChange": true, 
     "autoWidth": true,

@@ -37,7 +37,7 @@ Route::get('/data_member', [DatabaseController::class, 'data_member'])->name('da
 
 Route::get('/trx_umum', [TransaksiController::class, 'trx_umum'])->name('trx umum');
 Route::get('/trx_grosir', [TransaksiController::class, 'trx_grosir'])->name('trx grosir');
-Route::get('/trx_member', [TransaksiController::class, 'trx_member'])->name('trx member');
+Route::get('/trx_servis', [TransaksiController::class, 'trx_servis'])->name('trx servis');
 Route::get('/trx_logs', [TransaksiController::class, 'trx_logs'])->name('trx logs');
 
 Route::get('/laporan_harian', [LaporanController::class, 'laporan_harian'])->name('laporan harian');
