@@ -39,6 +39,7 @@ Route::get('/trx_umum', [TransaksiController::class, 'trx_umum'])->name('trx umu
 Route::get('/trx_grosir', [TransaksiController::class, 'trx_grosir'])->name('trx grosir');
 Route::get('/trx_servis', [TransaksiController::class, 'trx_servis'])->name('trx servis');
 Route::get('/trx_logs', [TransaksiController::class, 'trx_logs'])->name('trx logs');
+Route::post('/tambah_keranjang', [TransaksiController::class, 'tambah_keranjang'])->name('tambah keranjang');
 
 Route::get('/laporan_harian', [LaporanController::class, 'laporan_harian'])->name('laporan harian');
 Route::get('/laporan_bulanan', [LaporanController::class, 'laporan_bulanan'])->name('laporan bulanan');
