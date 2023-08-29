@@ -47,7 +47,9 @@ class TransaksiController extends Controller
         } else {
             $idTokoAktif = Auth::user()->id_toko;
             $data_barang = DataBarang::where('id_toko', $idTokoAktif)->get();
-            return view('admin.transaksi.trx_umum', compact(['data_barang']), ["title" => "Transaksi Umum"]);
+            $keranjang = Keranjang::where('id_toko', $idTokoAktif)->get();
+            $total = $this->calculateTotal($keranjang);
+            return view('admin.transaksi.trx_umum', compact(['data_barang'], ['keranjang'], ['total']), ["title" => "Transaksi Umum"]);
         }
     }
 
@@ -78,6 +80,7 @@ class TransaksiController extends Controller
 
         // Tambahkan produk ke keranjang
         $keranjangItem = [
+            'id_toko' => Auth::user()->id_toko,
             'nama' => $produk->nama,
             'harga' => $produk->harga_umum,
             'jumlah' => $qty,

@@ -51,7 +51,7 @@
             <h5 class="m-0">Administrasi</h5>
             </div>
             <div class="card-body">
-            <h6 class="card-title"><b>Total Belanja :</b> {{ $total }}</h6>
+            <h6 class="card-title"><b>Total Belanja :</b> @rp($total)</h6>
             </div>
         </div>
         </div>
@@ -81,8 +81,8 @@
                 <td><?= $no++ ?></td>
                 <td>{{ $data -> nama }}</td>
                 <td>{{ $data -> stok }}</td>
-                <td>{{ $data -> harga_umum }}</td>
-                <td width="10%" style="text-align: center">
+                <td>@rp($data -> harga_umum)</td>
+                <td width="15%" style="text-align: center">
                     <form method="post" action="/tambah_keranjang">
                         @csrf
                         <input type="hidden" name="id_barang" value="{{ $data->id }}">
@@ -108,6 +108,7 @@
                 <tr style="text-align: center">
                 <th>No</th>
                 <th>Nama</th>
+                <th>Harga</th>
                 <th>qty</th>
                 <th>Subtotal</th>
                 <th data-orderable="false">Menu</th>
@@ -119,11 +120,12 @@
                 <tr>
                 <td><?= $no++ ?></td>
                 <td>{{ $data-> nama }}</td>
+                <td>@rp($data -> harga)</td>
                 <td>{{ $data -> jumlah }}</td>
-                <td>{{ $data -> subtotal }}</td>
+                <td>@rp($data -> subtotal)</td>
 
                 <td width="10%" style="text-align: center">
-                        <button class="btn btn-info" type="submit"><i class="fa-solid fa-cart-plus"></i></button>
+                        <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
                     </form>
                 </td>
                 @endforeach

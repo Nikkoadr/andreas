@@ -43,7 +43,6 @@
                 <th>Stok</th>
                 <th>Harga Modal</th>
                 <th>Harga Umum</th>
-                <th>Harga Grosir</th>
                 <th>Harga Member</th>
                 <th data-orderable="false">Menu</th>
                 </tr>
@@ -55,10 +54,9 @@
                 <td><?= $no++ ?></td>
                 <td>{{ $data -> nama }}</td>
                 <td>{{ $data -> stok }}</td>
-                <td>{{ $data -> harga_modal }}</td>
-                <td>{{ $data -> harga_umum }}</td>
-                <td>{{ $data -> harga_grosir }}</td>
-                <td>{{ $data -> harga_member }}</td>
+                <td>@rp($data -> harga_modal)</td>
+                <td>@rp($data -> harga_umum)</td>
+                <td>@rp($data -> harga_member)</td>
                 <td width="10%" style="text-align: center">
                     <div style="display: inline;">
                         <button type="button" class="btn btn-info m-1" data-toggle="modal" data-target="#edit_siswa_id{{ $data->id }}"><i class="fa-regular fa-pen-to-square"></i></button>

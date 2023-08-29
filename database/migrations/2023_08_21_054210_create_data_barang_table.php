@@ -19,7 +19,6 @@ return new class extends Migration
             $table->integer('stok');
             $table->integer('harga_modal');
             $table->integer('harga_umum');
-            $table->integer('harga_grosir');
             $table->integer('harga_member');
             $table->timestamps();
         });

@@ -22,7 +22,6 @@ class DataBarangSeeder extends Seeder
                     'stok' => '100',
                     'harga_modal' => '9000',
                     'harga_umum' => '12000',
-                    'harga_grosir' => '11000',
                     'harga_member' => '10000',
                 ],
                 [
@@ -32,7 +31,6 @@ class DataBarangSeeder extends Seeder
                     'stok' => '100',
                     'harga_modal' => '9000',
                     'harga_umum' => '12000',
-                    'harga_grosir' => '11000',
                     'harga_member' => '10000',
                 ],
             ]
